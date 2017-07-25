@@ -1,0 +1,10 @@
+runtime: nodejs
+env: flex
+
+skip_files:
+ - ^node_modules$
+ - ^ignore$
+ - ^.env$
+
+manual_scaling:
+  instances: 1

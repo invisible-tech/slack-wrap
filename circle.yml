@@ -1,0 +1,20 @@
+dependencies:
+  override:
+    - yarn
+
+machine:
+  environment:
+    # For yarn
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+    LOG_LEVEL: silly
+    NODE_ENV: test
+
+  node:
+    version: "8.1.4"
+
+  timezone: America/Los_Angeles
+
+test:
+  override:
+    - yarn test
