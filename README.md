@@ -14,7 +14,6 @@ yarn add invisible-tech/slack-wrap
 require('dotenv').config() // Loads .env
 const { WebClient } = require('@slack/client')
 
-const { logger } = require('~/src/config/logger')
 const { wrap } = require('~/src/slack')
 
 const token = process.env.SLACK_API_TOKEN || ''
@@ -26,8 +25,8 @@ web.chat.postMessage({
   text: 'stuff',
   username: 'wooo2',
 })
-.then(logger.info)
-.catch(logger.error)
+.then(console.log)
+.catch(console.error)
 
 ```
 
