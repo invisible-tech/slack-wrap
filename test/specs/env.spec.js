@@ -1,10 +1,11 @@
 'use strict'
 
+const avow = require('avow')
 const {
   forEach,
 } = require('lodash/fp')
 
-const avow = require('avow')
+require('~/test/testHelper')
 
 const envVars = [
   'LOG_LEVEL',
