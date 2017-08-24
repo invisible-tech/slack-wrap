@@ -18,7 +18,7 @@ const destructuredArgsFn = require('../helpers/destructuredArgsFn')
 const destructuredArgsProxy = unwrapped => {
   const handler = {
     get(target, name) {
-      const deepAccess = isObject(unwrapped[name]) && ! isFunction(unwrapped[name])
+      const deepAccess = isObject(unwrapped[name]) && (! isFunction(unwrapped[name]))
       if (deepAccess) {
         // this allows us to override deep keys while keeping the other references
         return destructuredArgsProxy(unwrapped[name])
