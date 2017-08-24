@@ -1,6 +1,6 @@
 {
   "name": "@invisible/slack-wrap",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "version": "0.0.1",
   "description": "Wraps @slack/client to make it used destructured arguments",
   "engines": {
