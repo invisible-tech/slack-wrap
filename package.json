@@ -47,7 +47,7 @@
     "start": "node src",
     "pretest": "yarn run lint",
     "test": "yarn run test-only",
-    "test-only": "NODE_ENV=test nyc mocha test/testHelper.js $(find test -name '*.spec.js')"
+    "test-only": "NODE_ENV=test nyc mocha $(find test -name '*.spec.js')"
   },
   "dependencies": {
     "@slack/client": "^3.10.0",

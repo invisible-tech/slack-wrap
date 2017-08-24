@@ -1,6 +1,5 @@
 'use strict'
 
-require('~/test/testHelper')
 const avow = require('avow')
 
 const objArgsToArray = require('../../../src/helpers/objArgsToArray')

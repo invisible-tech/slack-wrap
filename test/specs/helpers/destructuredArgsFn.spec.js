@@ -1,7 +1,5 @@
 'use strict'
 
-require('~/test/testHelper')
-
 const avow = require('avow')
 
 const destructuredArgsFn = require('../../../src/helpers/destructuredArgsFn')
