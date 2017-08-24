@@ -1,8 +1,8 @@
 {
-  "name": "slack-wrap",
-  "license": "UNLICENSED",
-  "version": "0.0.1",
-  "description": "Wraps @slack/client to make it used destructured arguments",
+  "name": "@invisible/slack-wrap",
+  "license": "MIT",
+  "version": "0.0.4",
+  "description": "Wraps @slack/client to make it use destructured arguments",
   "engines": {
     "node": "^8.1.4"
   },
@@ -43,12 +43,11 @@
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
     "fix": "eslint --cache --fix scripts src test",
     "lint": "eslint --cache -f node_modules/eslint-formatter-pretty scripts src test",
-    "postinstall": "scripts/postinstall.sh",
     "prepublish": "nsp check",
     "start": "node src",
     "pretest": "yarn run lint",
     "test": "yarn run test-only",
-    "test-only": "NODE_ENV=test nyc mocha test/testHelper.js $(find test -name '*.spec.js')"
+    "test-only": "NODE_ENV=test nyc mocha $(find test -name '*.spec.js')"
   },
   "dependencies": {
     "@slack/client": "^3.10.0",

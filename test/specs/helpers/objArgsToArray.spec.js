@@ -1,9 +1,8 @@
 'use strict'
 
-require('~/test/testHelper')
 const avow = require('avow')
 
-const objArgsToArray = require('~/src/helpers/objArgsToArray')
+const objArgsToArray = require('../../../src/helpers/objArgsToArray')
 
 describe('objArgsToArray', () => {
   const testObj = { c: 'huh', a: 'wat', b: 'cool', d: 'stuff', e: 'things' }
@@ -26,6 +25,13 @@ describe('objArgsToArray', () => {
     const params = ['a', 'b', 'c']
     const actual = objArgsToArray({ obj: testObj, params })
     const expected = ['wat', 'cool', 'huh']
+    avow.deepStrictEqual(actual, expected)
+  })
+
+  it('should treat missing params as undefined empty', async () => {
+    const params = ['a', 'b', 'c']
+    const actual = objArgsToArray({ obj: undefined, params })
+    const expected = [undefined, undefined, undefined]
     avow.deepStrictEqual(actual, expected)
   })
 })

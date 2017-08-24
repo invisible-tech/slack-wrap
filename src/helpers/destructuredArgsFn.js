@@ -2,7 +2,7 @@
 
 const parseFunction = require('parse-function')
 
-const objArgsToArray = require('~/src/helpers/objArgsToArray')
+const objArgsToArray = require('./objArgsToArray')
 
 const fnParser = parseFunction()
 
