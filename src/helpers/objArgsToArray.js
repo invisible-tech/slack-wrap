@@ -1,6 +1,7 @@
 'use strict'
 
 const {
+  get,
   omit,
   reduce,
 } = require('lodash/fp')
@@ -33,7 +34,7 @@ const objArgsToArray = ({ obj, params }) =>
   reduce((acc, param) => (
     param === OPTS_PARAM
       ? [...acc, omit(params)(obj)]
-      : [...acc, obj[param]]
+      : [...acc, get(param)(obj)]
   ))([])(params)
 
 module.exports = objArgsToArray

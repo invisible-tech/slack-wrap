@@ -27,4 +27,11 @@ describe('objArgsToArray', () => {
     const expected = ['wat', 'cool', 'huh']
     avow.deepStrictEqual(actual, expected)
   })
+
+  it('should treat missing params as undefined empty', async () => {
+    const params = ['a', 'b', 'c']
+    const actual = objArgsToArray({ obj: undefined, params })
+    const expected = [undefined, undefined, undefined]
+    avow.deepStrictEqual(actual, expected)
+  })
 })
