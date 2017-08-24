@@ -23,7 +23,7 @@ const destructuredArgsProxy = unwrapped => {
         // this allows us to override deep keys while keeping the other references
         return destructuredArgsProxy(unwrapped[name])
       }
-      return destructuredArgsFn({ fn: unwrapped[name], parent: unwrapped })
+      return destructuredArgsFn({ fn: unwrapped[name], context: unwrapped })
     },
   }
   return new Proxy(unwrapped, handler)
