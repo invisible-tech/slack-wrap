@@ -13,10 +13,10 @@ yarn add invisible-tech/slack-wrap
 
 require('dotenv').config() // Loads .env
 const { WebClient } = require('@slack/client')
-const { wrap } = require('@invisible/slack-wrap')
+const slackWrap = require('@invisible/slack-wrap')
 
 const token = process.env.SLACK_API_TOKEN || ''
-const web = wrap(new WebClient(token))
+const web = slackWrap(new WebClient(token))
 
 web.chat.postMessage({
   channel: 'C6BQ7JA0J',
@@ -26,6 +26,4 @@ web.chat.postMessage({
 })
 .then(console.log)
 .catch(console.error)
-
 ```
-
