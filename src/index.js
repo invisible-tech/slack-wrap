@@ -1,3 +1,3 @@
 'use strict'
 
-module.exports = require('~/src/slack').wrap
+module.exports = require('./slack').wrap

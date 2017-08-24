@@ -3,7 +3,7 @@
 require('~/test/testHelper')
 const avow = require('avow')
 
-const objArgsToArray = require('~/src/helpers/objArgsToArray')
+const objArgsToArray = require('../../../src/helpers/objArgsToArray')
 
 describe('objArgsToArray', () => {
   const testObj = { c: 'huh', a: 'wat', b: 'cool', d: 'stuff', e: 'things' }
