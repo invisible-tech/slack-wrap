@@ -28,11 +28,14 @@ const destructuredArgsFn = ({ fn, context = undefined }) => {
   // fnParser.parse is just a string of the params
   const { args: params } = fnParser.parse(fn)
 
-  const expectsNamedArgs = params.length === 1 && params[0] === false
+  // If the function already expects one argument that is an object, do nothing
+  const expectsNamedArgs = (params.length === 1 && params[0] === false) || params.length === 0
   if (expectsNamedArgs) {
     return context ? fn.bind(context) : fn
   }
-  return obj => fn.apply(context, objArgsToArray({ obj, params }))
+
+  return (obj = {}) =>
+    fn.apply(context, objArgsToArray({ obj, params }))
 }
 
 module.exports = destructuredArgsFn
