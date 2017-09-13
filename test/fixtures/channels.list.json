@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "channels": [
+    {
+      "id": "C0M4CEK6H",
+      "name": "general",
+      "is_channel": true,
+      "created": 1455290097,
+      "creator": "U0M4D06RH",
+      "is_archived": false,
+      "is_general": true,
+      "unlinked": 0,
+      "name_normalized": "general",
+      "is_shared": false,
+      "is_org_shared": false,
+      "is_member": true,
+      "is_private": false,
+      "is_mpim": false,
+      "members": [
+        "U0M4ATWSG",
+        "U0M4D06RH",
+        "U0MQ5JF7A",
+        "U0MVBJS06",
+        "U0NCN8UAY",
+        "U0NCTT74P",
+        "U0QSCAU9Z",
+        "U0R0P2A5Q",
+        "U6HKBSUBC"
+      ],
+      "topic": {
+        "value": "Company-wide announcements and work-based matters",
+        "creator": "",
+        "last_set": 0
+      },
+      "purpose": {
+        "value": "This channel is for team-wide communication and announcements. All team members are in this channel.",
+        "creator": "",
+        "last_set": 0
+      },
+      "previous_names": [
+        "デゼヽワヲマヅブバウデョノオゼハクゥョハペ",
+        "ض",
+        "ƹ",
+        "general"
+      ],
+      "num_members": 5
+    },
+    {
+      "id": "C56LM84QY",
+      "name": "3-inv-ktj-pfn",
+      "is_channel": true,
+      "created": 1493721437,
+      "creator": "U0M4D06RH",
+      "is_archived": true,
+      "is_general": false,
+      "unlinked": 0,
+      "name_normalized": "3-inv-ktj-pfn",
+      "is_shared": false,
+      "is_org_shared": false,
+      "is_member": false,
+      "is_private": false,
+      "is_mpim": false,
+      "members": [],
+      "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+      },
+      "purpose": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+      },
+      "previous_names": [],
+      "num_members": 0
+    },
+    {
+      "id": "C56LM8J8G",
+      "name": "3-inv-ktj-hir",
+      "is_channel": true,
+      "created": 1493721440,
+      "creator": "U0M4D06RH",
+      "is_archived": true,
+      "is_general": false,
+      "unlinked": 0,
+      "name_normalized": "3-inv-ktj-hir",
+      "is_shared": false,
+      "is_org_shared": false,
+      "is_member": false,
+      "is_private": false,
+      "is_mpim": false,
+      "members": [],
+      "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+      },
+      "purpose": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+      },
+      "previous_names": [],
+      "num_members": 0
+    }
+  ],
+  "response_metadata": {
+    "next_cursor": "dGVhbTpDNTZQTDQxRlQ="
+  }
+}

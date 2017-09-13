@@ -48,7 +48,12 @@ describe('helpers/overrideProxy', () => {
     avow.strictEqual(wrapped.h, 'this key also doesn\'t exist on the original')
   })
 
-  it('should return undefined if no override nor default exists', () => {
+  it('should return undefined it no override nor default exists', () => {
+    const { wrapped } = setup()
+    avow.strictEqual(undefined, wrapped.asdf)
+  })
+
+  it('should return undefined it no override nor default exists', () => {
     const { wrapped } = setup()
     avow.strictEqual(undefined, wrapped.asdf)
   })
