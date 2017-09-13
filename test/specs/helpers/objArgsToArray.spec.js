@@ -13,15 +13,14 @@ describe('objArgsToArray', () => {
     avow.deepStrictEqual(objArgsToArray({ obj, params }), ['la', 'di', 'da'])
   })
 
-
-  it('should merge unexpcted params when params contains opts', async () => {
+  it('should merge unexpected params when params contains opts', async () => {
     const params = ['a', 'opts', 'b', 'c']
     const actual = objArgsToArray({ obj: testObj, params })
     const expected = ['wat', { d: 'stuff', e: 'things' }, 'cool', 'huh']
     avow.deepStrictEqual(actual, expected)
   })
 
-  it('should ignore unexpcted params when no opts', async () => {
+  it('should ignore unexpected params when no opts', async () => {
     const params = ['a', 'b', 'c']
     const actual = objArgsToArray({ obj: testObj, params })
     const expected = ['wat', 'cool', 'huh']
