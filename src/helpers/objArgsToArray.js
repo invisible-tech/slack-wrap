@@ -30,7 +30,7 @@ const OPTS_PARAM = 'opts'
  * @param {Array} params - an Array of Strings representing the parameter names
  * @return {Array} an Array of arguments in the correct order
  */
-const objArgsToArray = ({ obj, params }) =>
+const objArgsToArray = ({ obj = {}, params = [] }) =>
   reduce((acc, param) => (
     param === OPTS_PARAM
       ? [...acc, omit(params)(obj)]

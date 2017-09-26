@@ -1,0 +1,163 @@
+{
+  "acceptedScopes": [
+    "channels:history"
+  ],
+  "has_more": true,
+  "messages": [
+    {
+      "source_team": "T4D6T3Q05",
+      "team": "T0B32CY83",
+      "text": "If someone destroyed my laptop, it would take me a day to recover, but I could do it easily because I have my shiz backed up. I guess this would save a day, at the cost of slightly degraded performance all the time. It's not worth it IMO",
+      "ts": "1505276893.000059",
+      "type": "message",
+      "user": "W4YBZELAC",
+      "user_profile": {
+        "avatar_hash": "6c96e2a90b2c",
+        "display_name": "ktj",
+        "first_name": "Keenahn",
+        "image_72": "https://avatars.slack-edge.com/2017-03-31/162930625797_6c96e2a90b2c39eee401_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "ktj",
+        "real_name": "Keenahn Jung",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T4D6T3Q05"
+    },
+    {
+      "source_team": "T4D6T3Q05",
+      "team": "T0B32CY83",
+      "text": "<@W4Z3A5NFL> you're talking about your own personal dev environment? \n\nI know teams that run everything in VMs, and this makes onboarding new team members fast. I don't like the performance hit, interference with native shortcuts, etc.",
+      "ts": "1505276853.000008",
+      "type": "message",
+      "user": "W4YBZELAC",
+      "user_profile": {
+        "avatar_hash": "6c96e2a90b2c",
+        "display_name": "ktj",
+        "first_name": "Keenahn",
+        "image_72": "https://avatars.slack-edge.com/2017-03-31/162930625797_6c96e2a90b2c39eee401_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "ktj",
+        "real_name": "Keenahn Jung",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T4D6T3Q05"
+    },
+    {
+      "edited": {
+        "ts": "1505261455.000000",
+        "user": "W62U7F7FC"
+      },
+      "source_team": "T0B32CY83",
+      "team": "T0B32CY83",
+      "text": "Today I was reading about top-level `await` . If that interest you:\n<https://github.com/tc39/ecmascript-asyncawait/issues/9>\n<https://gist.github.com/Rich-Harris/0b6f317657f5167663b493c722647221>",
+      "ts": "1505261450.000095",
+      "type": "message",
+      "user": "W62U7F7FC",
+      "user_profile": {
+        "avatar_hash": "bb3f6affa641",
+        "display_name": "rgo",
+        "first_name": "Rodrigo",
+        "image_72": "https://avatars.slack-edge.com/2017-07-03/207288483284_bb3f6affa6414293ffd9_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "rgo",
+        "real_name": "Rodrigo Oliveira",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T0B32CY83"
+    },
+    {
+      "source_team": "T3RH60YDA",
+      "team": "T0B32CY83",
+      "text": "That's interesting...",
+      "ts": "1505254746.000009",
+      "type": "message",
+      "user": "W4ZPP25UP",
+      "user_profile": {
+        "avatar_hash": "9d367f0d69ef",
+        "display_name": "lkk",
+        "first_name": "Leonardo",
+        "image_72": "https://avatars.slack-edge.com/2017-06-02/191794521027_9d367f0d69ef7f37d874_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "lkk",
+        "real_name": "Leonardo Kewitz",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T3RH60YDA"
+    },
+    {
+      "attachments": [
+        {
+          "fallback": "freeCodeCamp: Why I Still Use Vim – freeCodeCamp",
+          "fields": [
+            {
+              "short": true,
+              "title": "Reading time",
+              "value": "3 min read"
+            }
+          ],
+          "from_url": "https://medium.freecodecamp.org/why-i-still-use-vim-67afd76b4db6",
+          "id": 1,
+          "image_bytes": 7132,
+          "image_height": 250,
+          "image_url": "https://cdn-images-1.medium.com/max/1200/1*ZdqL3eJXV4v-ZlkDKJIlNg.png",
+          "image_width": 405,
+          "service_icon": "https://cdn-images-1.medium.com/fit/c/304/304/1*MotlWcSa2n6FrOx3ul89kw.png",
+          "service_name": "freeCodeCamp",
+          "text": "And no, it’s not because I cannot figure out how to close it.",
+          "title": "Why I Still Use Vim – freeCodeCamp",
+          "title_link": "https://medium.freecodecamp.org/why-i-still-use-vim-67afd76b4db6",
+          "ts": 1501819310
+        }
+      ],
+      "source_team": "T4D6T3Q05",
+      "team": "T0B32CY83",
+      "text": "<https://medium.freecodecamp.org/why-i-still-use-vim-67afd76b4db6>",
+      "ts": "1502255203.585434",
+      "type": "message",
+      "user": "W4YBZELAC",
+      "user_profile": {
+        "avatar_hash": "6c96e2a90b2c",
+        "display_name": "ktj",
+        "first_name": "Keenahn",
+        "image_72": "https://avatars.slack-edge.com/2017-03-31/162930625797_6c96e2a90b2c39eee401_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "ktj",
+        "real_name": "Keenahn Jung",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T4D6T3Q05"
+    }
+  ],
+  "ok": true,
+  "scopes": [
+    "identify",
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history",
+    "channels:read",
+    "files:read",
+    "groups:read",
+    "im:read",
+    "mpim:read",
+    "reactions:read",
+    "reminders:read",
+    "team:read",
+    "users:read",
+    "channels:write",
+    "chat:write:user",
+    "chat:write:bot",
+    "files:write:user",
+    "groups:write",
+    "im:write",
+    "mpim:write",
+    "reactions:write",
+    "reminders:write",
+    "users:write"
+  ]
+}

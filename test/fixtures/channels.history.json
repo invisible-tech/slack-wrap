@@ -1,0 +1,139 @@
+{
+  "acceptedScopes": [
+    "channels:history"
+  ],
+  "has_more": true,
+  "messages": [
+    {
+      "source_team": "T4D6T3Q05",
+      "team": "T0B32CY83",
+      "text": "Coo",
+      "ts": "1505301991.000048",
+      "type": "message",
+      "user": "W4YBZELAC",
+      "user_profile": {
+        "avatar_hash": "6c96e2a90b2c",
+        "display_name": "ktj",
+        "first_name": "Keenahn",
+        "image_72": "https://avatars.slack-edge.com/2017-03-31/162930625797_6c96e2a90b2c39eee401_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "ktj",
+        "real_name": "Keenahn Jung",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T4D6T3Q05"
+    },
+    {
+      "parent_user_id": "W4YBZELAC",
+      "source_team": "T3RCAFXB5",
+      "team": "T0B32CY83",
+      "text": "Yey :tada:",
+      "thread_ts": "1505203814.000222",
+      "ts": "1505301319.000037",
+      "type": "message",
+      "user": "W4Z3A5NFL",
+      "user_profile": {
+        "avatar_hash": "ffeca3f7a549",
+        "display_name": "gcg",
+        "first_name": "Gunar",
+        "image_72": "https://avatars.slack-edge.com/2017-06-14/197914519204_ffeca3f7a54974891885_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "gcg",
+        "real_name": "Gunar Gessner",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T3RCAFXB5"
+    },
+    {
+      "source_team": "T3RCAFXB5",
+      "team": "T0B32CY83",
+      "text": "Yeah, that what I thought. Just wanted you to confirm. ",
+      "ts": "1505301277.000292",
+      "type": "message",
+      "user": "W4Z3A5NFL",
+      "user_profile": {
+        "avatar_hash": "ffeca3f7a549",
+        "display_name": "gcg",
+        "first_name": "Gunar",
+        "image_72": "https://avatars.slack-edge.com/2017-06-14/197914519204_ffeca3f7a54974891885_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "gcg",
+        "real_name": "Gunar Gessner",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T3RCAFXB5"
+    },
+    {
+      "parent_user_id": "W4YBZELAC",
+      "source_team": "T4D6T3Q05",
+      "team": "T0B32CY83",
+      "text": "<@W4ZPP25UP> we are moving forward with this change. I discussed it with KJP and he told me that this is actually a sticking point for clients. They don't get the channel naming and find it confusing. So OK, it is actually in response to customer feedback.",
+      "thread_ts": "1505203602.000195",
+      "ts": "1505273609.000087",
+      "type": "message",
+      "user": "W4YBZELAC",
+      "user_profile": {
+        "avatar_hash": "6c96e2a90b2c",
+        "display_name": "ktj",
+        "first_name": "Keenahn",
+        "image_72": "https://avatars.slack-edge.com/2017-03-31/162930625797_6c96e2a90b2c39eee401_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "ktj",
+        "real_name": "Keenahn Jung",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T4D6T3Q05"
+    },
+    {
+      "source_team": "T4D6T3Q05",
+      "team": "T0B32CY83",
+      "text": "Thanks, that's relevant to me. I'm just starting looking into this shiz",
+      "ts": "1504256635.000148",
+      "type": "message",
+      "user": "W4YBZELAC",
+      "user_profile": {
+        "avatar_hash": "6c96e2a90b2c",
+        "display_name": "ktj",
+        "first_name": "Keenahn",
+        "image_72": "https://avatars.slack-edge.com/2017-03-31/162930625797_6c96e2a90b2c39eee401_72.jpg",
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "name": "ktj",
+        "real_name": "Keenahn Jung",
+        "team": "E4UFHCNFQ"
+      },
+      "user_team": "T4D6T3Q05"
+    }
+  ],
+  "ok": true,
+  "scopes": [
+    "identify",
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history",
+    "channels:read",
+    "files:read",
+    "groups:read",
+    "im:read",
+    "mpim:read",
+    "reactions:read",
+    "reminders:read",
+    "team:read",
+    "users:read",
+    "channels:write",
+    "chat:write:user",
+    "chat:write:bot",
+    "files:write:user",
+    "groups:write",
+    "im:write",
+    "mpim:write",
+    "reactions:write",
+    "reminders:write",
+    "users:write"
+  ]
+}
