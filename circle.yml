@@ -18,3 +18,10 @@ machine:
 test:
   override:
     - yarn test
+
+deployment:
+  release:
+    branch: master
+    commands:
+      - 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
+      - npm publish --access=public
