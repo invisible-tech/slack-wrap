@@ -6,7 +6,7 @@
   "engines": {
     "node": "^8.5"
   },
-  "homepage": "",
+  "homepage": "https://github.com/invisible-tech/slack-wrap",
   "author": {
     "email": "tng@invisible.email",
     "name": "Invisible Technologies",
