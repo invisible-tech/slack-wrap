@@ -37,11 +37,11 @@
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
     "fix": "eslint --cache --fix scripts src test",
     "lint": "eslint --cache -f node_modules/eslint-formatter-pretty --ignore-path .gitignore .",
-    "prepublish": "nsp check",
     "start": "node src",
     "pretest": "yarn run lint",
     "test": "yarn run test-only",
-    "test-only": "NODE_ENV=test nyc mocha $(find test -name '*.spec.js')"
+    "test-only": "NODE_ENV=test nyc mocha $(find test -name '*.spec.js')",
+    "posttest": "nsp check"
   },
   "dependencies": {
     "@slack/client": "^3.11.0",
