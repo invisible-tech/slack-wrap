@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Wraps @slack/client to make it use destructured arguments",
   "engines": {
-    "node": "^8.1.4"
+    "node": "^8.5"
   },
   "homepage": "",
   "author": {
@@ -18,7 +18,7 @@
   "main": "src/index.js",
   "keywords": [],
   "devDependencies": {
-    "@invisible/chance-extras": "invisible-tech/chance-extras#fdb18af",
+    "@invisible/chance-extras": "invisible-tech/chance-extras#8c5e693",
     "docdash": "^0.4.0",
     "eslint": "^4.1.1",
     "eslint-config-airbnb": "^15.0.1",
@@ -61,6 +61,7 @@
     "ncurry": "^1.0.0",
     "parse-function": "^4.0.3",
     "request-promise-native": "^1.0.4",
+    "wavy": "^1.0.4",
     "winston": "^2.3.1"
   }
 }
