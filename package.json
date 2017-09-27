@@ -18,7 +18,7 @@
   "main": "src/index.js",
   "keywords": [],
   "devDependencies": {
-    "@invisible/chance-extras": "invisible-tech/chance-extras#8c5e693",
+    "@invisible/chance-extras": "^1.0.1",
     "docdash": "^0.4.0",
     "eslint": "^4.1.1",
     "eslint-config-airbnb": "^15.0.1",

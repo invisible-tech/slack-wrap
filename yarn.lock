@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@invisible/chance-extras@invisible-tech/chance-extras#8c5e693":
-  version "1.0.0"
-  resolved "https://codeload.github.com/invisible-tech/chance-extras/tar.gz/8c5e693f594127143ded57a6a883ebdfbe73afb8"
+"@invisible/chance-extras@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@invisible/chance-extras/-/chance-extras-1.0.1.tgz#4c49d5b13ebf0fc11927c12a6a7417509e7ff21d"
   dependencies:
     avow "^4.0.1"
     chance "^1.0.6"
