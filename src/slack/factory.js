@@ -60,7 +60,7 @@ const factory = ({ accessToken, teamId, cachedPaths = false, methods = false } =
   const existing = getSlack({ accessToken, teamId })
   if (existing) return existing
 
-  const unwrapped = (accessToken && teamId) ?
+  const unwrapped = accessToken ?
     new WebClient(accessToken) :
     new WebClient()
 
