@@ -3,7 +3,7 @@
 const avow = require('avow')
 const chance = require('@invisible/chance-extras')
 
-const factory = require('~/src/slack/factory')
+const factory = require('../../../src/slack/factory')
 
 describe('slack/factory', () => {
   const setup = () => ({

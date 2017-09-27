@@ -6,7 +6,7 @@
   "engines": {
     "node": "^8.5"
   },
-  "homepage": "",
+  "homepage": "https://github.com/invisible-tech/slack-wrap",
   "author": {
     "email": "tng@invisible.email",
     "name": "Invisible Technologies",
@@ -43,7 +43,7 @@
     "builddoc": "jsdoc -c .jsdoc.json",
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
     "fix": "eslint --cache --fix scripts src test",
-    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty scripts src test",
+    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty --ignore-path .gitignore .",
     "prepublish": "nsp check",
     "start": "node src",
     "pretest": "yarn run lint",
@@ -61,7 +61,6 @@
     "ncurry": "^1.0.0",
     "parse-function": "^4.0.3",
     "request-promise-native": "^1.0.4",
-    "wavy": "^1.0.4",
     "winston": "^2.3.1"
   }
 }

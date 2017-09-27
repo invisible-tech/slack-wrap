@@ -8,9 +8,9 @@ const {
   mapValues,
 } = require('lodash/fp')
 
-const cachedProxy = require('~/src/helpers/cachedProxy')
-const destructuredArgsProxy = require('~/src/helpers/destructuredArgsProxy')
-const overrideProxy = require('~/src/helpers/overrideProxy')
+const cachedProxy = require('../helpers/cachedProxy')
+const destructuredArgsProxy = require('../helpers/destructuredArgsProxy')
+const overrideProxy = require('../helpers/overrideProxy')
 
 // Keep global array of slack clients here, indexed by token and teamId
 const slacks = []
