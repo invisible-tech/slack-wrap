@@ -13,7 +13,7 @@ const {
   split,
 } = require('lodash/fp')
 
-const { exportForTest } = require('~/src/helpers/utility')
+const { exportForTest } = require('./utility')
 
 const CACHE_TTL = 1000 * 60 * 1 // one minute in milliseconds
 const GLOBAL_CACHE = new memoryCache.Cache()

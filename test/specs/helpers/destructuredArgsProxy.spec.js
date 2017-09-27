@@ -2,7 +2,7 @@
 
 const avow = require('avow')
 
-const destructuredArgsProxy = require('~/src/helpers/destructuredArgsProxy')
+const destructuredArgsProxy = require('../../../src/helpers/destructuredArgsProxy')
 
 describe('helpers/destructuredArgsProxy', () => {
   const setup = () => {

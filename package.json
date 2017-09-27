@@ -61,7 +61,6 @@
     "ncurry": "^1.0.0",
     "parse-function": "^4.0.3",
     "request-promise-native": "^1.0.4",
-    "wavy": "^1.0.4",
     "winston": "^2.3.1"
   }
 }

@@ -10,9 +10,9 @@ const {
   map,
 } = require('lodash/fp')
 
-const channelsHistoryFixture = require('~/test/fixtures/channels.history.json')
-const channelsHistoryFixture2 = require('~/test/fixtures/channels.history2.json')
-const { getMessage } = require('~/src/slack/methods/message')
+const channelsHistoryFixture = require('../../../fixtures/channels.history.json')
+const channelsHistoryFixture2 = require('../../../fixtures/channels.history2.json')
+const { getMessage } = require('../../../../src/slack/methods/message')
 
 describe('slack/methods/message', () => {
   describe('getMessage', () => {

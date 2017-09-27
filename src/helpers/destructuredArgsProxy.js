@@ -5,7 +5,7 @@ const {
   isFunction,
 } = require('lodash/fp')
 
-const destructuredArgsFn = require('~/src/helpers/destructuredArgsFn')
+const destructuredArgsFn = require('./destructuredArgsFn')
 
 /**
  * Recursively proxies an object and all its methods to accept destructured

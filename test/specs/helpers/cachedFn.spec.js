@@ -14,7 +14,7 @@ const {
   GLOBAL_CACHE,
   makeCached,
   makeCachedObjPath,
-} = require('~/src/helpers/cachedFn')
+} = require('../../../src/helpers/cachedFn')
 
 describe('helpers/cachedFn', () => {
   describe('cacheKey', () => {
