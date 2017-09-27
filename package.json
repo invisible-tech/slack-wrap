@@ -43,7 +43,7 @@
     "builddoc": "jsdoc -c .jsdoc.json",
     "coverage": "nyc report --reporter=lcov --reporter=html --reporter=text-summary --reporter=text",
     "fix": "eslint --cache --fix scripts src test",
-    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty scripts src test",
+    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty --ignore-path .gitignore .",
     "prepublish": "nsp check",
     "start": "node src",
     "pretest": "yarn run lint",
