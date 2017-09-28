@@ -35,13 +35,13 @@ const getSlack = ({ accessToken, teamId }) => {
   return undefined
 }
 
-const addMethods = ({ accessToken, slack, slackUnwrapped, teamId, methods = false }) => {
+const addMethods = ({ accessToken, slack, teamId, methods = false }) => {
   const getTeamId = () => teamId
   const getAccessToken = () => accessToken
 
   return Object.assign(
     { getTeamId, getAccessToken },
-    methods ? mapValues(fn => fn(slack, slackUnwrapped))(methods) : {},
+    methods ? mapValues(fn => fn(slack))(methods) : {},
   )
 }
 
@@ -74,7 +74,6 @@ const factory = ({ accessToken, teamId, cachedPaths = false, methods = false } =
   const newMethods = addMethods({
     accessToken,
     slack: cached,
-    slackUnwrapped: unwrapped,
     methods: methods || require('./methods'),
     teamId,
   })
