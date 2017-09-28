@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 
 const {
   isTestEnv,
@@ -15,12 +15,12 @@ describe('helpers/utility', () => {
   describe('isTestEnv', () => {
     it('should return true if in test env', async () => {
       process.env.NODE_ENV = 'test'
-      avow(isTestEnv())
+      assert(isTestEnv())
     })
 
     it('should return false if not in test env', async () => {
       process.env.NODE_ENV = 'development'
-      avow(! isTestEnv())
+      assert(! isTestEnv())
     })
   })
 
@@ -43,7 +43,7 @@ describe('helpers/utility', () => {
       process.env.NODE_ENV = 'test'
       exportForTest(theModule, { stuff2 })
 
-      avow.deepStrictEqual(theModule.exports, { stuff, stuff2 })
+      assert.deepStrictEqual(theModule.exports, { stuff, stuff2 })
     })
 
     it('should ignore extra exports when not in test env', async () => {
@@ -52,7 +52,7 @@ describe('helpers/utility', () => {
       process.env.NODE_ENV = 'development'
       exportForTest(theModule, { stuff2 })
 
-      avow.deepStrictEqual(theModule.exports, { stuff })
+      assert.deepStrictEqual(theModule.exports, { stuff })
     })
   })
 })

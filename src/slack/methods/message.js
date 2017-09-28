@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const {
   first,
 } = require('lodash/fp')
@@ -18,7 +18,7 @@ const {
  */
 const getMessage = slack =>
   async ({ channelId, ts }) => {
-    avow(ts, 'no ts given')
+    assert(ts, 'no ts given')
     const response = await slack.channels.history({
       channel: channelId,
       inclusive: true,

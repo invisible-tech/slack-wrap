@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const memoryCache = require('memory-cache')
 const timekeeper = require('timekeeper')
 const {
@@ -19,7 +19,7 @@ const {
 describe('helpers/cachedFn', () => {
   describe('cacheKey', () => {
     it('should return undefined if no name given', async () => {
-      avow.strictEqual(
+      assert.strictEqual(
         cacheKey({ options: { hello: 'there' } }),
         undefined
       )
@@ -27,7 +27,7 @@ describe('helpers/cachedFn', () => {
 
     it('should return the name if no options given', async () => {
       const name = 'hello.longname'
-      avow.strictEqual(
+      assert.strictEqual(
         cacheKey({ name }),
         name
       )
@@ -41,7 +41,7 @@ describe('helpers/cachedFn', () => {
         fn: () => 'functions are ignored',
         b: 3,
       }
-      avow.strictEqual(
+      assert.strictEqual(
         cacheKey({ name, options }),
         'hello.longname-{"goodbye":{"what":"cool"},"more":["a","b"],"b":3}'
       )
@@ -68,7 +68,7 @@ describe('helpers/cachedFn', () => {
       const expected = cachedFn()
 
       timekeeper.freeze(now + (CACHE_TTL / 2)) // cache ttl will be halfway expired
-      avow.strictEqual(expected, cachedFn())
+      assert.strictEqual(expected, cachedFn())
     })
 
     it('should not return the cached result if outside the TTL', async () => {
@@ -78,7 +78,7 @@ describe('helpers/cachedFn', () => {
       const expected = cachedFn()
 
       timekeeper.freeze(now + (CACHE_TTL + 1000))
-      avow.notStrictEqual(expected, cachedFn())
+      assert.notStrictEqual(expected, cachedFn())
     })
 
     it('should keep caches separate when given cache object', async () => {
@@ -96,9 +96,9 @@ describe('helpers/cachedFn', () => {
       const result12 = cachedFn1()
       const result22 = cachedFn2()
 
-      avow.strictEqual(result11, result12)
-      avow.strictEqual(result21, result22)
-      avow.notStrictEqual(result11, result21)
+      assert.strictEqual(result11, result12)
+      assert.strictEqual(result21, result22)
+      assert.notStrictEqual(result11, result21)
     })
 
     it('should keep separate same function when given different names', async () => {
@@ -114,9 +114,9 @@ describe('helpers/cachedFn', () => {
       const result12 = cachedFn1()
       const result22 = cachedFn2()
 
-      avow.strictEqual(result11, result12)
-      avow.strictEqual(result21, result22)
-      avow.notStrictEqual(result11, result21)
+      assert.strictEqual(result11, result12)
+      assert.strictEqual(result21, result22)
+      assert.notStrictEqual(result11, result21)
     })
 
     it('should keep separate same function when given different arguments', async () => {
@@ -131,9 +131,9 @@ describe('helpers/cachedFn', () => {
       const result12 = cachedFn()
       const result22 = cachedFn({ arg: 'value' })
 
-      avow.strictEqual(result11, result12)
-      avow.strictEqual(result21, result22)
-      avow.notStrictEqual(result11, result21)
+      assert.strictEqual(result11, result12)
+      assert.strictEqual(result21, result22)
+      assert.notStrictEqual(result11, result21)
     })
 
     it('should work when given ttl', async () => {
@@ -144,11 +144,11 @@ describe('helpers/cachedFn', () => {
 
       timekeeper.freeze(now + (ttl / 2))
       const result2 = cachedFn()
-      avow.strictEqual(result1, result2)
+      assert.strictEqual(result1, result2)
 
       timekeeper.freeze(now + ttl + 100000)
       const result3 = cachedFn()
-      avow.notStrictEqual(result1, result3)
+      assert.notStrictEqual(result1, result3)
     })
 
     it('should work when given context for fn', async () => {
@@ -168,13 +168,13 @@ describe('helpers/cachedFn', () => {
       const result12 = cachedFn1()
       const result22 = cachedFn2()
 
-      avow.strictEqual(result11, result12)
-      avow.strictEqual(result21, result22)
-      avow.notStrictEqual(result11, result21)
+      assert.strictEqual(result11, result12)
+      assert.strictEqual(result21, result22)
+      assert.notStrictEqual(result11, result21)
     })
 
     it('should throw if not given a fn', async () => {
-      avow.throws(
+      assert.throws(
         () => { makeCached() },
         'no fn given'
       )
@@ -226,9 +226,9 @@ describe('helpers/cachedFn', () => {
       timekeeper.freeze(now + CACHE_TTL + 20)
       const result13 = cachedFn1()
 
-      avow.strictEqual(result11, result12)
-      avow.strictEqual(result12, result21)
-      avow.notStrictEqual(result11, result13)
+      assert.strictEqual(result11, result12)
+      assert.strictEqual(result12, result21)
+      assert.notStrictEqual(result11, result13)
     })
 
     it('should work with repeated calls on the same object because of currying', async () => {
@@ -246,9 +246,9 @@ describe('helpers/cachedFn', () => {
       const result12 = cachedFn1()
       const result22 = cachedFn2()
 
-      avow.strictEqual(result11, result12)
-      avow.strictEqual(result21, result22)
-      avow.notStrictEqual(result11, result21)
+      assert.strictEqual(result11, result12)
+      assert.strictEqual(result21, result22)
+      assert.notStrictEqual(result11, result21)
     })
   })
 
@@ -267,8 +267,8 @@ describe('helpers/cachedFn', () => {
 
       const { context, fn } = getContextAndFnFromObjPath({ obj, path })
 
-      avow.deepStrictEqual(context, obj.deep.nested)
-      avow.deepStrictEqual(fn, obj.deep.nested.fn)
+      assert.deepStrictEqual(context, obj.deep.nested)
+      assert.deepStrictEqual(fn, obj.deep.nested.fn)
     })
   })
 })

@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const memoryCache = require('memory-cache')
 const ncurry = require('ncurry')
 const {
@@ -46,7 +46,7 @@ const cacheKey = ({ name, options }) => {
  * @return {Function} - the cached function
  */
 const makeCached = ({ cache = GLOBAL_CACHE, context, fn, name, ttl = CACHE_TTL } = {}) => {
-  avow(fn, 'no fn given')
+  assert(fn, 'no fn given')
   const cacheKeyName = name || fn.toString()
   const boundFn = fn.bind(context)
 

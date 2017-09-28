@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const sinon = require('sinon')
 const chance = require('@invisible/chance-extras')
 const {
@@ -50,7 +50,7 @@ describe('slack/methods/message', () => {
       const expected = find({ ts })(messages)
       const actual = await getMessage(slack)({ channelId, ts })
 
-      avow.deepStrictEqual(expected, actual)
+      assert.deepStrictEqual(expected, actual)
     })
   })
 })
