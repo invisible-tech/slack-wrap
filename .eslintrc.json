@@ -1,3 +1,13 @@
 {
-  "extends": "@invisible"
+  "extends": "@invisible",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "node_modules",
+          "."
+        ]
+      }
+    }
+  }
 }
