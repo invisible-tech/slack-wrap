@@ -6,8 +6,8 @@ const {
   set,
 } = require('lodash/fp')
 
-const { makeCachedObjPath } = require('./cachedFn')
-const overrideProxy = require('./overrideProxy')
+const { makeCachedObjPath } = require('src/helpers/cachedFn')
+const overrideProxy = require('src/helpers/overrideProxy')
 
 /**
  * Creates the overridden, cached versions of functions, given an object and
