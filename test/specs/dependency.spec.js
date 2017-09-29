@@ -28,7 +28,7 @@ describe('dependencies', () => {
     })
   })
 
-  it('should have found some files', () =>
+  it('should have found some files', () => {
     assert(jsFiles.length > 0, 'no files found!')
-  )
+  })
 })
