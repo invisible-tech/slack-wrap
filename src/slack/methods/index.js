@@ -6,7 +6,9 @@
  */
 
 const message = require('./message')
+const files = require('./files')
 
 module.exports = {
   ...message,
+  ...files,
 }
