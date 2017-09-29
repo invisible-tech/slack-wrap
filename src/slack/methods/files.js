@@ -2,6 +2,8 @@
 
 /**
  * Shares a File to a Channel
+ * NB: THIS METHODS REQUIRES A BROWSER TOKEN.
+ *
  *
  * @method shareFile
  * @param {Object} slack - The wrapped slack
@@ -21,6 +23,7 @@ const shareFile = slack =>
 
 /**
  * Unshares a File to a Channel
+ * NB: THIS METHODS REQUIRES A BROWSER TOKEN.
  *
  * @method unshareFile
  * @param {Object} slack - The wrapped slack
