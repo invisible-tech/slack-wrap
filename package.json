@@ -19,7 +19,7 @@
   "keywords": [],
   "devDependencies": {
     "@invisible/chance-extras": "^1.0.1",
-    "@invisible/eslint-config": "^1.0.0",
+    "@invisible/eslint-config": "^1.1.1",
     "docdash": "^0.4.0",
     "eslint": "^4.7.2",
     "jsdoc": "^3.4.3",
