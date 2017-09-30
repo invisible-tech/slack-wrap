@@ -2,7 +2,7 @@
 
 const avow = require('avow')
 
-const overrideProxy = require('../../../src/helpers/overrideProxy')
+const overrideProxy = require('src/helpers/overrideProxy')
 
 describe('helpers/overrideProxy', () => {
   const setup = () => {

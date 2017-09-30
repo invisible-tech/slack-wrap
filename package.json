@@ -19,7 +19,7 @@
   "keywords": [],
   "devDependencies": {
     "@invisible/chance-extras": "^1.0.1",
-    "@invisible/eslint-config": "^1.0.0",
+    "@invisible/eslint-config": "^1.1.1",
     "docdash": "^0.4.0",
     "eslint": "^4.7.2",
     "jsdoc": "^3.4.3",
@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@slack/client": "^3.11.0",
+    "app-module-path": "^2.2.0",
     "avow": "^3.0.2",
     "common-tags": "^1.4.0",
     "dotenv": "^4.0.0",

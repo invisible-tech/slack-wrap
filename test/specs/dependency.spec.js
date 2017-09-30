@@ -21,8 +21,7 @@ describe('dependencies', () => {
         forEach(filename =>
           it(`should be able to require ${filename.substring(ROOT_DIR.length)}`, () => {
             require(filename)
-          })
-        )(files)
+          }))(files)
       })
 
       done()
@@ -30,6 +29,5 @@ describe('dependencies', () => {
   })
 
   it('should have found some files', () =>
-    avow(jsFiles.length > 0, 'no files found!')
-  )
+    avow(jsFiles.length > 0, 'no files found!'))
 })

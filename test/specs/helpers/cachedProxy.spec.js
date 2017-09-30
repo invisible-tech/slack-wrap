@@ -3,11 +3,11 @@
 const avow = require('avow')
 const timekeeper = require('timekeeper')
 
-const cachedProxy = require('../../../src/helpers/cachedProxy')
+const cachedProxy = require('src/helpers/cachedProxy')
 const {
   CACHE_TTL,
   GLOBAL_CACHE,
-} = require('../../../src/helpers/cachedFn')
+} = require('src/helpers/cachedFn')
 
 describe('helpers/cachedProxy', () => {
   const setup = () => {

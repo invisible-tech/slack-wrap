@@ -5,7 +5,7 @@ const avow = require('avow')
 const {
   isTestEnv,
   exportForTest,
-} = require('../../../src/helpers/utility')
+} = require('src/helpers/utility')
 
 describe('helpers/utility', () => {
   afterEach(() => {

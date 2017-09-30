@@ -14,7 +14,7 @@ const {
   GLOBAL_CACHE,
   makeCached,
   makeCachedObjPath,
-} = require('../../../src/helpers/cachedFn')
+} = require('src/helpers/cachedFn')
 
 describe('helpers/cachedFn', () => {
   describe('cacheKey', () => {
@@ -153,7 +153,7 @@ describe('helpers/cachedFn', () => {
 
     it('should work when given context for fn', async () => {
       const { now } = setup()
-      const fn = function() { return this.a }
+      const fn = function () { return this.a }
 
       const context1 = { a: 'context1' }
       const context2 = { a: 'context2' }
