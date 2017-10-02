@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('@invisible/assert')
 const timekeeper = require('timekeeper')
 
 const cachedProxy = require('src/helpers/cachedProxy')
@@ -28,7 +28,7 @@ describe('helpers/cachedProxy', () => {
 
     timekeeper.freeze(now + (CACHE_TTL / 2))
 
-    avow.notStrictEqual(now, proxy.fn())
+    assert.notStrictEqual(now, proxy.fn())
   })
 
   it('should cache the method that is passed in as cachedPaths, and within the TTL', async () => {
@@ -38,7 +38,7 @@ describe('helpers/cachedProxy', () => {
     const expected = proxy.fn()
 
     timekeeper.freeze(now + (CACHE_TTL / 2))
-    avow.strictEqual(expected, proxy.fn())
+    assert.strictEqual(expected, proxy.fn())
   })
 
   it('should not return the cached result if outside the TTL', async () => {
@@ -47,10 +47,10 @@ describe('helpers/cachedProxy', () => {
 
     timekeeper.freeze(now + (CACHE_TTL / 2))
 
-    avow.notStrictEqual(now, proxy.fn())
+    assert.notStrictEqual(now, proxy.fn())
 
     timekeeper.freeze(now + (CACHE_TTL + 1000))
-    avow.notStrictEqual(now, proxy.fn())
+    assert.notStrictEqual(now, proxy.fn())
   })
 
   it('should work when given ttl in cachedPaths', async () => {
@@ -61,11 +61,11 @@ describe('helpers/cachedProxy', () => {
 
     timekeeper.freeze(now + (ttl / 2))
     const result2 = proxy.fn()
-    avow.strictEqual(result1, result2)
+    assert.strictEqual(result1, result2)
 
     timekeeper.freeze(now + ttl + 100000)
     const result3 = proxy.fn()
-    avow.notStrictEqual(result1, result3)
+    assert.notStrictEqual(result1, result3)
   })
 
   it('should keep caches separate for different cachedProxies', async () => {
@@ -81,8 +81,8 @@ describe('helpers/cachedProxy', () => {
     const result12 = proxy1.fn()
     const result22 = proxy2.fn()
 
-    avow.strictEqual(result11, result12)
-    avow.strictEqual(result21, result22)
-    avow.notStrictEqual(result11, result21)
+    assert.strictEqual(result11, result12)
+    assert.strictEqual(result21, result22)
+    assert.notStrictEqual(result11, result21)
   })
 })
