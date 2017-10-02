@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('@invisible/assert')
 
 const destructuredArgsFn = require('../../../src/helpers/destructuredArgsFn')
 
@@ -17,22 +17,22 @@ describe('destructuredArgsFn', () => {
     const objFn = ({ d, e }) => `${e} ${d}`
     const args = { d: 1, e: 2 }
     const expected = objFn(args)
-    avow.strictEqual(destructuredArgsFn({ fn: objFn }), objFn)
-    avow.strictEqual(destructuredArgsFn({ fn: objFn })(args), expected)
+    assert.strictEqual(destructuredArgsFn({ fn: objFn }), objFn)
+    assert.strictEqual(destructuredArgsFn({ fn: objFn })(args), expected)
   })
 
   it('should work when opts is present', async () => {
     const fnWithOpts = (a, b, c, opts) => `${a} ${b} ${c} ${opts.thing}`
     const actual = destructuredArgsFn({ fn: fnWithOpts })(testObject)
     const expected = 'hey ho lets go'
-    avow.strictEqual(actual, expected)
+    assert.strictEqual(actual, expected)
   })
 
   it('should work when opts is not present', async () => {
     const fn = (a, b, c) => `${a} ${b} ${c}`
     const actual = destructuredArgsFn({ fn })(testObject)
     const expected = 'hey ho lets'
-    avow.strictEqual(actual, expected)
+    assert.strictEqual(actual, expected)
   })
 
   it('should bind method correctly when context is passed in', async () => {
@@ -42,6 +42,6 @@ describe('destructuredArgsFn', () => {
     const context = { thing: 'we can do what we want' }
     const actual = destructuredArgsFn({ fn, context })({ a: 'It\'s', b: 'our', c: 'party' })
     const expected = 'It\'s our party we can do what we want'
-    avow.strictEqual(actual, expected)
+    assert.strictEqual(actual, expected)
   })
 })
