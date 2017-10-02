@@ -20,6 +20,13 @@
     eslint-plugin-lodash-fp "^2.1.3"
     eslint-plugin-promise "^3.5.0"
 
+"@invisible/publish@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@invisible/publish/-/publish-1.1.6.tgz#f9cdc613e9f5250b1f2afe4ceda9c8f137ecae88"
+  dependencies:
+    cross-spawn "^5.1.0"
+    lodash "^4.17.4"
+
 "@slack/client@^3.11.0":
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/@slack/client/-/client-3.14.0.tgz#8daf9fdd526ae1d65b43a3a53af1b80de3779f9d"
