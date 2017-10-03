@@ -1,6 +1,6 @@
 # slack-wrap
 
-[![CircleCI](https://circleci.com/gh/invisible-tech/slack-wrap.svg?style=svg)](https://circleci.com/gh/invisible-tech/slack-wrap)
+[![CircleCI](https://circleci.com/gh/invisible-tech/slack-wrap/tree/master.svg?style=svg)](https://circleci.com/gh/invisible-tech/slack-wrap/tree/master)
 
 This module wraps the Slack Web Client and does several things to enhance the API.
 
