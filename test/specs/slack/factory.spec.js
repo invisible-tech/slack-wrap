@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 const chance = require('@invisible/chance-extras')
 
 const factory = require('src/slack/factory')
@@ -13,8 +13,8 @@ describe('slack/factory', () => {
 
   it('should work when no arguments passed in', async () => {
     const slack = factory()
-    avow.strictEqual(slack.getAccessToken(), undefined)
-    avow.strictEqual(slack.getTeamId(), undefined)
+    assert.strictEqual(slack.getAccessToken(), undefined)
+    assert.strictEqual(slack.getTeamId(), undefined)
   })
 
   describe('should return cached client', () => {
@@ -23,10 +23,10 @@ describe('slack/factory', () => {
       const slack = factory({ accessToken, teamId })
       const _slack = factory({ accessToken })
 
-      avow.strictEqual(slack.getAccessToken(), accessToken)
-      avow.strictEqual(slack.getTeamId(), teamId)
-      avow.strictEqual(slack.getAccessToken(), _slack.getAccessToken())
-      avow.strictEqual(slack.getTeamId(), _slack.getTeamId())
+      assert.strictEqual(slack.getAccessToken(), accessToken)
+      assert.strictEqual(slack.getTeamId(), teamId)
+      assert.strictEqual(slack.getAccessToken(), _slack.getAccessToken())
+      assert.strictEqual(slack.getTeamId(), _slack.getTeamId())
     })
 
     it('when given existent teamId', async () => {
@@ -34,20 +34,20 @@ describe('slack/factory', () => {
       const slack = factory({ accessToken, teamId })
       const _slack = factory({ teamId })
 
-      avow.strictEqual(slack.getAccessToken(), accessToken)
-      avow.strictEqual(slack.getTeamId(), teamId)
-      avow.strictEqual(slack.getAccessToken(), _slack.getAccessToken())
-      avow.strictEqual(slack.getTeamId(), _slack.getTeamId())
+      assert.strictEqual(slack.getAccessToken(), accessToken)
+      assert.strictEqual(slack.getTeamId(), teamId)
+      assert.strictEqual(slack.getAccessToken(), _slack.getAccessToken())
+      assert.strictEqual(slack.getTeamId(), _slack.getTeamId())
     })
 
     it('when given no accessToken nor teamId', async () => {
       const slack = factory()
       const _slack = factory()
 
-      avow.strictEqual(slack.getAccessToken(), undefined)
-      avow.strictEqual(slack.getTeamId(), undefined)
-      avow.strictEqual(slack.getAccessToken(), _slack.getAccessToken())
-      avow.strictEqual(slack.getTeamId(), _slack.getTeamId())
+      assert.strictEqual(slack.getAccessToken(), undefined)
+      assert.strictEqual(slack.getTeamId(), undefined)
+      assert.strictEqual(slack.getAccessToken(), _slack.getAccessToken())
+      assert.strictEqual(slack.getTeamId(), _slack.getTeamId())
     })
   })
 })

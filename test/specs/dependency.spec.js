@@ -4,7 +4,7 @@ const {
   forEach,
 } = require('lodash/fp')
 
-const avow = require('avow')
+const assert = require('assert')
 const path = require('path')
 const recursiveReaddir = require('recursive-readdir')
 
@@ -28,6 +28,7 @@ describe('dependencies', () => {
     })
   })
 
-  it('should have found some files', () =>
-    avow(jsFiles.length > 0, 'no files found!'))
+  it('should have found some files', () => {
+    assert(jsFiles.length > 0, 'no files found!')
+  })
 })

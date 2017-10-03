@@ -1,6 +1,6 @@
 'use strict'
 
-const avow = require('avow')
+const assert = require('assert')
 
 const objArgsToArray = require('../../../src/helpers/objArgsToArray')
 
@@ -10,27 +10,27 @@ describe('objArgsToArray', () => {
   it('should return the correct array when no opts', async () => {
     const params = ['a', 'b', 'c']
     const obj = { c: 'da', a: 'la', b: 'di' }
-    avow.deepStrictEqual(objArgsToArray({ obj, params }), ['la', 'di', 'da'])
+    assert.deepStrictEqual(objArgsToArray({ obj, params }), ['la', 'di', 'da'])
   })
 
   it('should merge unexpected params when params contains opts', async () => {
     const params = ['a', 'opts', 'b', 'c']
     const actual = objArgsToArray({ obj: testObj, params })
     const expected = ['wat', { d: 'stuff', e: 'things' }, 'cool', 'huh']
-    avow.deepStrictEqual(actual, expected)
+    assert.deepStrictEqual(actual, expected)
   })
 
   it('should ignore unexpected params when no opts', async () => {
     const params = ['a', 'b', 'c']
     const actual = objArgsToArray({ obj: testObj, params })
     const expected = ['wat', 'cool', 'huh']
-    avow.deepStrictEqual(actual, expected)
+    assert.deepStrictEqual(actual, expected)
   })
 
   it('should treat missing params as undefined empty', async () => {
     const params = ['a', 'b', 'c']
     const actual = objArgsToArray({ obj: undefined, params })
     const expected = [undefined, undefined, undefined]
-    avow.deepStrictEqual(actual, expected)
+    assert.deepStrictEqual(actual, expected)
   })
 })
