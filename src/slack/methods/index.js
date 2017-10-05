@@ -7,8 +7,10 @@
 
 const message = require('./message')
 const files = require('./files')
+const format = require('./format')
 
 module.exports = {
   ...message,
   ...files,
+  ...format,
 }
