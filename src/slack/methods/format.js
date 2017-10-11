@@ -3,7 +3,7 @@
 const { oneLineTrim } = require('common-tags')
 const { replace } = require('lodash/fp')
 
-const getChannelLink = (channelId, display) =>
+const getChannelLink = ({ channelId, display }) =>
   (display
     ? `<#${channelId}|${display}>`
     : `<#${channelId}>`)
@@ -16,7 +16,7 @@ const getMessageLink = ({ teamName, channelId, ts, display }) =>
     : oneLineTrim`<https://${teamName}.slack.com/archives/
         ${channelId}/p${removeDot(ts)}>`)
 
-const getUserLink = (userId, display) =>
+const getUserLink = ({ userId, display }) =>
   (display
     ? `<@${userId}|${display}>`
     : `<@${userId}>`)
