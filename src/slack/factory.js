@@ -38,11 +38,14 @@ const getSlack = ({ accessToken, teamId }) => {
 const addMethods = ({ accessToken, slack, teamId, methods = false }) => {
   const getTeamId = () => teamId
   const getAccessToken = () => accessToken
+  const scopedMethods = methods ? mapValues(fn => fn(slack))(methods.scopedMethods) : {}
 
-  return Object.assign(
-    { getTeamId, getAccessToken },
-    methods ? mapValues(fn => fn(slack))(methods) : {},
-  )
+  return {
+    getTeamId,
+    getAccessToken,
+    ...methods.unscopedMethods,
+    ...scopedMethods,
+  }
 }
 
 /**
