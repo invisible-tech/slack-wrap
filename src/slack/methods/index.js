@@ -9,8 +9,11 @@ const message = require('./message')
 const files = require('./files')
 const format = require('./format')
 
-module.exports = {
+module.exports.scopedMethods = {
   ...message,
   ...files,
+}
+
+module.exports.unscopedMethods = {
   ...format,
 }
