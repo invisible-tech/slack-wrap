@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@invisible/chance-extras@^1.0.1":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@invisible/chance-extras/-/chance-extras-1.0.5.tgz#9ba1a4265ea00787ddfb1710a61f701f760ce9ac"
+"@invisible/chance-extras@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@invisible/chance-extras/-/chance-extras-1.0.6.tgz#6e0d144dfbf2b7bb77f5eb21588898818b82c3f1"
   dependencies:
     chance "^1.0.6"
     lodash "^4.17.4"

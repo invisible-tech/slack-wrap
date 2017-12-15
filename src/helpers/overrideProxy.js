@@ -38,7 +38,19 @@ function overrideProxy({ obj, overrides, path = undefined }) {
         }
         return override
       }
-      return get(newPath)(obj)
+      const objPath = get(newPath)(obj)
+      if (isFunction(objPath)) {
+        return (params = {}) => {
+          const result = objPath(params)
+          // If the result is a Promise add a catch handler.
+          if (isObject(result) && get('then')(result)) {
+            return result
+              .catch(err => { throw Error(`ERROR: ${err.message} Name: ${name} Params: ${JSON.stringify(params)}`) })
+          }
+          return result
+        }
+      }
+      return objPath
     },
   }
 
