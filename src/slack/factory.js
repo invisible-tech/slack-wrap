@@ -5,12 +5,13 @@ const {
   find,
   flow,
   get,
-  mapValues,
+  each,
+  keys,
+  map,
 } = require('lodash/fp')
 
 const cachedProxy = require('src/helpers/cachedProxy')
 const destructuredArgsProxy = require('src/helpers/destructuredArgsProxy')
-const overrideProxy = require('src/helpers/overrideProxy')
 
 // Keep global array of slack clients here, indexed by token and teamId
 const slacks = []
@@ -38,15 +39,23 @@ const getSlack = ({ accessToken, teamId }) => {
 const addMethods = ({ accessToken, slack, teamId, methods = false }) => {
   const getTeamId = () => teamId
   const getAccessToken = () => accessToken
-  const scopedMethods = methods ? mapValues(fn => fn(slack))(methods.scopedMethods) : {}
 
-  return {
-    getTeamId,
-    getAccessToken,
-    ...methods.unscopedMethods,
-    ...scopedMethods,
-  }
+  // const ret = {}
+
+  // each(key => {
+  //   ret[key] = methods[key].bind(slack)
+  // })(keys(methods))
+
+  const newMethods = methods ?
+    { getTeamId, getAccessToken, ...methods } :
+    { getTeamId, getAccessToken }
+
+  console.log(newMethods)
+
+  Object.assign(slack, newMethods)
+  return slack
 }
+
 
 /**
  * Creates a wrapped Slack Web Client
@@ -71,17 +80,15 @@ const factory = ({ accessToken, teamId, cachedPaths = false, methods = false } =
   const destructured = destructuredArgsProxy(unwrapped)
 
   // Cached methods should be replaced with the cached versions
-  const cached = cachedProxy({ obj: destructured, cachedPaths })
+  // const cached = cachedProxy({ obj: destructured, cachedPaths })
 
   // Add our custom methods
-  const newMethods = addMethods({
+  const slack = addMethods({
     accessToken,
-    slack: cached,
+    slack: destructured,
     methods: methods || require('./methods'),
     teamId,
   })
-
-  const slack = overrideProxy({ obj: cached, overrides: newMethods })
 
   // Add to the global array of Slack Web clients
   slacks.push({ accessToken, slack, teamId })

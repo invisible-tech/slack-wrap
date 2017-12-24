@@ -16,18 +16,17 @@ const {
  * @return {Object} - A Slack Message object as returned by the API, or throws if
  *   the channel is not found, or the ts is invalid
  */
-const getMessage = slack =>
-  async ({ channelId, ts }) => {
-    assert(ts, 'no ts given')
-    const response = await slack.channels.history({
-      channel: channelId,
-      inclusive: true,
-      latest: ts,
-      oldest: ts,
-      count: 1,
-    })
-    return first(response.messages)
-  }
+const getMessage = async function ({ channelId, ts }) {
+  assert(ts, 'no ts given')
+  const response = await this.channels.history({
+    channel: channelId,
+    inclusive: true,
+    latest: ts,
+    oldest: ts,
+    count: 1,
+  })
+  return first(response.messages)
+}
 
 module.exports = {
   getMessage,

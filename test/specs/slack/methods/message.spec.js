@@ -48,7 +48,7 @@ describe('slack/methods/message', () => {
       const ts = chance.pickone(map('ts')(messages))
 
       const expected = find({ ts })(messages)
-      const actual = await getMessage(slack)({ channelId, ts })
+      const actual = await getMessage.bind(slack)({ channelId, ts })
 
       assert.deepStrictEqual(expected, actual)
     })
