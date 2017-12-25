@@ -43,7 +43,7 @@ const addMethods = ({ accessToken, slack, teamId, methods = false }) => {
   // const ret = {}
 
   // each(key => {
-  //   ret[key] = methods[key].bind(slack)
+  //   slack[key] = methods[key]
   // })(keys(methods))
 
   const newMethods = methods ?

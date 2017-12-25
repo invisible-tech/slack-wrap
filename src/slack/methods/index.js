@@ -9,9 +9,12 @@ const message = require('./message')
 const files = require('./files')
 const format = require('./format')
 
-module.exports = {
+module.exports = false
+
+/*{
   ...message,
   // ...files,
   // ...format,
 }
 
+*/

@@ -22,6 +22,10 @@ const {
  */
 function overrideProxy({ obj, overrides, path = undefined }) {
   const handler = {
+    set: (target, key, value) => {
+      target[key] = value
+      return true
+    },
     get: (target, name) => {
       if (typeof name !== 'string') {
         // see https://github.com/nodejs/node/issues/10731

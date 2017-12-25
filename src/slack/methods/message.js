@@ -17,6 +17,9 @@ const {
  *   the channel is not found, or the ts is invalid
  */
 const getMessage = async function ({ channelId, ts }) {
+
+  console.log(this)
+
   assert(ts, 'no ts given')
   const response = await this.channels.history({
     channel: channelId,
