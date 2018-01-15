@@ -60,9 +60,9 @@ const factory = ({ accessToken, teamId, cachedPaths = false, methods = false } =
   const existing = getSlack({ accessToken, teamId })
   if (existing) return existing
 
-  const unwrapped = accessToken ?
-    new WebClient(accessToken) :
-    new WebClient()
+  const unwrapped = accessToken
+    ? new WebClient(accessToken, { retryConfig: { retries: 0 } })
+    : new WebClient()
 
   // All methods should accept destructured args
   const destructured = destructuredArgsProxy(unwrapped)
