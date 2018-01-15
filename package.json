@@ -45,7 +45,7 @@
     "posttest": "assert-version-bump && nsp check"
   },
   "dependencies": {
-    "@slack/client": "^3.11.0",
+    "@slack/client": "^3.15.0",
     "app-module-path": "^2.2.0",
     "common-tags": "^1.4.0",
     "dotenv": "^4.0.0",
