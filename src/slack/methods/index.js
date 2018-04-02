@@ -5,10 +5,12 @@
  *   object via dependency injection.
  */
 
-const message = require('./message')
+const channels = require('./channels')
 const files = require('./files')
+const message = require('./message')
 
 module.exports = {
-  ...message,
+  ...channels,
   ...files,
+  ...message,
 }
